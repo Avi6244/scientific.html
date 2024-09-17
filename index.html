@@ -11,33 +11,35 @@
         <input id="display" readonly>
         <div id="keys">
             <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('/')" class="operator">/</button>
+            <button onclick="deleteChar()" class="operator">Del</button>
+            <button onclick="clearDisplay()" class="operator">AC</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('*')" class="operator">*</button>
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')" class="operator">*</button>
+            <button onclick="calculate()" class="operator">=</button>
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('/')" class="operator">/</button>
+            <button onclick="appendToDisplay('.')" class="operator">.</button>
             <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="appendToDisplay('exp')">exp</button>
-            <button onclick="clearDisplay()" class="operator">AC</button>
-            <button onclick="appendToDisplay('sin')">sin</button>
-            <button onclick="appendToDisplay('cos')">cos</button>
-            <button onclick="appendToDisplay('tan')">tan</button>
-            <button onclick="deleteChar()" class="operator">Del</button>
-            <button onclick="appendToDisplay('pi')">&#x03C0;</button>
-            <button onclick="appendToDisplay('log(')">log</button>
-            <button onclick="appendToDisplay('sqrt(')">&#8730;</button>
-            <button onclick="calculate()" class="operator">=</button>
-            <button onclick="appendToDisplay('(')">(</button>
-            <button onclick="appendToDisplay(')')">)</button>
-            <button onclick="appendToDisplay('^')">^</button>
+
+            <button onclick="appendToDisplay('exp')" class="scientific">exp</button>
+            <button onclick="appendToDisplay('sin')" class="scientific">sin</button>
+            <button onclick="appendToDisplay('cos')" class="scientific">cos</button>
+            <button onclick="appendToDisplay('tan')" class="scientific">tan</button>
+            <button onclick="appendToDisplay('pi')" class="scientific">&#x03C0;</button>
+            <button onclick="appendToDisplay('log(')" class="scientific">log</button>
+            <button onclick="appendToDisplay('sqrt(')" class="scientific">&#8730;</button>
+
+            <button onclick="appendToDisplay('(')" class="scientific">(</button>
+            <button onclick="appendToDisplay(')')" class="scientific">)</button>
+            <button onclick="appendToDisplay('^')" class="scientific">^</button>
             
         </div>
     </div>
