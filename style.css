@@ -1,68 +1,141 @@
-body{
+
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background: #b0c4de;
+
+}
+.container{
+    padding: 10px;
+    background: #1a1f22;
+    height: 550px;
+    width: 330px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05)0px 8px 32px;
+}
+.container .input-box{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    overflow-x: scroll;
+}
+.container .input-box::-webkit-scrollbar{
+    display: none;
+}
+.container .input-box .result{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+
+.container .input-box input{
+    all: unset;
+    color: grey;
+    position: absolute;
+    right: 25px;
+    bottom: 60px;
+    text-align: right;
+    font-size: 24px;
+}
+.container .btns-box{
+    position: absolute;
+    left: 0;
+    border: 1px silod red;
+    top: 200px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.container .btns-box .btn,.container .btns-box .btns,.container .btns-box #ac,.container .btns-box #del-btn{
+    all: unset;
+    width: 50px;
+    height: 50px;
+    float: left;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid #24282e;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 21px;
 }
-#calculator{
-    font-family: 'Courier New', Courier, monospace;
-    background-color: hsl(0, 0%, 15%);
-    border-radius: 25px;
-    max-width: 500px;
-    overflow: hidden;
+.container .btns-box #ac,.container .btns-box #del-btn{
+    background-color: #24282e;
 }
-#display{
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
-    border: none;
-    background-color: hsl(0, 0%, 20%);
-    color: white;
+.container .btns-box .with-bg-btn{
+    color: grey;
+    background-color: #24282e;
+
 }
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    padding: 25px;
+.container .btns-box .shift{
+    position: relative;
+    left: 72px;
+  
 }
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color: hsl(0, 0%, 30%);
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
+.container .scientific-btns{
+    height: 300px;
+    width: 230px;
+    background: #fcba04;
+    border-radius: 7px;
+    padding: 15px;
+    margin-left: 8px;
+    position: absolute;
+    bottom: 30px;
+    left: -250px;
+    transition: all .2s;
+}
+.container .scientific-btns.active{
+    left: 5px;
+}
+.container .scientific-btns .scien-btn{
+    all: unset;
+    height: 35px;
+    width: 45px;
+    float: left;
+    margin-left: 15px;
+    display: felx;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 21px;
+    margin-left: 15px;
+    position: relative;
+    top: -13px;
     cursor: pointer;
 }
-.scientific{
-    background-color: hsl(180, 100%, 30%);
-    font-size: 3rem;
+.container .scientific-btns .back-btn{
+    all: unset;
+    height: 50px;
+    width: 70px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #fcba04;
+    position: absolute;
+    right: -65px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
 }
-
-button:hover{
-    background-color: hsl(0, 0%, 40%);
-}
-button:active{
-    background-color: hsl(0, 0%, 60%);
-}
-.operator{
-    background-color: hsl(35, 100%, 55%);
-}
-.operator:hover{
-    background-color: hsl(35, 100%, 65%);
-}
-.operator:active{
-    background-color: hsl(35, 100%, 80%);
-}
-.scientific:hover{
-    background-color:  hsl(180, 100%, 40%);
-}
-.scientific:active{
-    background-color:  hsl(180, 100%, 60%);
-}
-
