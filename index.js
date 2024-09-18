@@ -47,5 +47,3 @@ let clearInput =() =>{
     input.value = '';
     result.innerHTML = 0;
 }
-
- 
